@@ -11,3 +11,13 @@ Route::get('/', function () {
 
 // Ruta para recibir y registrar las solicitudes de acceso a la demo
 Route::post('/demo-requests', [DemoRequestController::class, 'store'])->name('demo-requests.store');
+
+// Ruta para la página de Auditoría de Módulos
+Route::get('/modulos', function () {
+    return Inertia::render('AuditoriaModulos');
+})->name('modulos.auditoria');
+
+// Ruta oculta: Pitch para socios estratégicos
+Route::get('/alianzas', function () {
+    return Inertia::render('Alianzas');
+})->name('alianzas');

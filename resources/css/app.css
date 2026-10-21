@@ -1657,3 +1657,370 @@ button {
         padding: 24px;
     }
 }
+
+/* (reservado) */
+
+.alianzas-section {
+    padding: 120px 0;
+    background: var(--color-dark);
+    color: var(--color-white);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Destello de fondo decorativo */
+.alianzas-section::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(226, 0, 116, 0.12) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.alianzas-section::after {
+    content: '';
+    position: absolute;
+    bottom: -150px;
+    left: -150px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(122, 0, 153, 0.1) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.alianzas-section .section-header {
+    position: relative;
+    z-index: 1;
+}
+
+.alianzas-section .section-title {
+    color: var(--color-white);
+}
+
+.alianzas-section .section-subtext {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.alianzas-section .badge {
+    background: rgba(226, 0, 116, 0.2);
+    border-color: rgba(226, 0, 116, 0.3);
+    color: #FF6EBB;
+}
+
+/* ── Métricas ─────────────────────────────────────────────────────── */
+.alianzas-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: var(--radius-lg);
+    padding: 40px;
+    margin-bottom: 72px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.alianzas-stat-item {
+    flex: 1;
+    min-width: 140px;
+    text-align: center;
+    padding: 12px 24px;
+}
+
+.alianzas-stat-num {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    line-height: 1;
+    margin-bottom: 8px;
+    letter-spacing: -1px;
+}
+
+.alianzas-stat-num span {
+    font-size: 2rem;
+}
+
+.alianzas-stat-label {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.55);
+    font-weight: 500;
+    line-height: 1.4;
+    max-width: 140px;
+    margin: 0 auto;
+}
+
+.alianzas-stat-divider {
+    width: 1px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.08);
+    flex-shrink: 0;
+}
+
+/* ── Grid de tipos de socio ───────────────────────────────────────── */
+.alianzas-socios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 72px;
+    position: relative;
+    z-index: 1;
+}
+
+.socio-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: var(--radius-lg);
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    transition: var(--transition-normal);
+}
+
+.socio-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-6px);
+}
+
+/* Línea de color superior por tipo */
+.socio-card-mint  { border-top: 3px solid #27C93F; }
+.socio-card-blue  { border-top: 3px solid #4B8EF5; }
+.socio-card-amber { border-top: 3px solid #F5A623; }
+
+.socio-header {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.socio-badge {
+    align-self: flex-start;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 5px 12px;
+    border-radius: var(--radius-full);
+}
+
+.socio-badge-mint  { background: rgba(39, 201, 63, 0.15);  color: #27C93F; }
+.socio-badge-blue  { background: rgba(75, 142, 245, 0.15); color: #4B8EF5; }
+.socio-badge-amber { background: rgba(245, 166, 35, 0.15); color: #F5A623; }
+
+.socio-title {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--color-white);
+    line-height: 1.3;
+}
+
+.socio-subtitle {
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.6;
+}
+
+.socio-lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+}
+
+.socio-lista li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.5;
+}
+
+.socio-card-mint  .socio-lista li svg { color: #27C93F; flex-shrink: 0; margin-top: 2px; }
+.socio-card-blue  .socio-lista li svg { color: #4B8EF5; flex-shrink: 0; margin-top: 2px; }
+.socio-card-amber .socio-lista li svg { color: #F5A623; flex-shrink: 0; margin-top: 2px; }
+
+.socio-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.socio-modelo-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.socio-modelo-valor {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* ── Tabla del modelo de alianza ──────────────────────────────────── */
+.alianzas-tabla-wrapper {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 72px;
+}
+
+.alianzas-tabla-header {
+    text-align: center;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.alianzas-tabla-title {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--color-white);
+}
+
+.alianzas-tabla-subtitle {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.alianzas-table th {
+    background: rgba(255, 255, 255, 0.04) !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07) !important;
+}
+
+.alianzas-table td {
+    color: rgba(255, 255, 255, 0.65) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+.alianzas-table .tova-highlight {
+    background: rgba(226, 0, 116, 0.08) !important;
+    color: #FF6EBB !important;
+    font-weight: 600 !important;
+}
+
+.alianzas-table .row-destacada td {
+    border-left: none !important;
+    border-right: none !important;
+    background: rgba(255, 255, 255, 0.02) !important;
+}
+
+.alianzas-table .row-destacada .tova-highlight {
+    background: rgba(226, 0, 116, 0.12) !important;
+}
+
+.alianzas-tabla-wrapper .table-wrapper {
+    border-color: rgba(255, 255, 255, 0.07) !important;
+    background: transparent;
+}
+
+.alianzas-tabla-wrapper .comp-table {
+    background: transparent !important;
+}
+
+/* ── CTA de alianzas ──────────────────────────────────────────────── */
+.alianzas-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: var(--radius-lg);
+    padding: 48px;
+    position: relative;
+    z-index: 1;
+    flex-wrap: wrap;
+}
+
+.alianzas-cta-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.alianzas-cta-title {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--color-white);
+}
+
+.alianzas-cta-subtitle {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.alianzas-cta-btn {
+    padding: 16px 36px;
+    font-size: 1rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* ── Responsividad ────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .alianzas-socios-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .alianzas-stats {
+        gap: 0;
+    }
+
+    .alianzas-stat-divider {
+        display: none;
+    }
+
+    .alianzas-stat-item {
+        min-width: 130px;
+        padding: 16px;
+    }
+
+    .alianzas-cta {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .alianzas-stats {
+        padding: 24px 16px;
+    }
+
+    .alianzas-stat-num {
+        font-size: 2.4rem;
+    }
+
+    .alianzas-tabla-title {
+        font-size: 1.4rem;
+    }
+
+    .alianzas-cta {
+        padding: 32px 24px;
+    }
+
+    .alianzas-cta-title {
+        font-size: 1.4rem;
+    }
+}
